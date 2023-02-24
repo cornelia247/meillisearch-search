@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  meilisearch:
+    image: getmeili/meilisearch:v1.0
+    environment:
+      - MEILI_ENV=development
+    ports:
+      - "7700:7700"
+    volumes:
+      - ./meili_data:/meili_data
+    command: []
+    tty: true
+    stdin_open: true
